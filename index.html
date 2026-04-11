@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>iOS Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #0a0a0a;
+      --muted: #888;
+      --border: #e8e8e8;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 48px;
+      z-index: 100;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-name {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 500;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 0 48px 64px;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-number {
+      position: absolute;
+      top: 50%;
+      right: -20px;
+      transform: translateY(-50%);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(200px, 30vw, 400px);
+      color: #f2f2f2;
+      line-height: 1;
+      user-select: none;
+      pointer-events: none;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-tag {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 16px;
+      opacity: 0;
+      animation: fadeUp 0.7s ease 0.1s forwards;
+    }
+
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(72px, 12vw, 160px);
+      line-height: 0.92;
+      letter-spacing: -0.01em;
+      color: var(--text);
+      max-width: 800px;
+      opacity: 0;
+      animation: fadeUp 0.7s ease 0.2s forwards;
+    }
+
+    .hero-sub {
+      margin-top: 32px;
+      color: var(--muted);
+      font-size: 14px;
+      max-width: 360px;
+      line-height: 1.8;
+      opacity: 0;
+      animation: fadeUp 0.7s ease 0.35s forwards;
+    }
+
+    /* SECTION */
+    .section {
+      padding: 80px 48px;
+      border-bottom: 1px solid var(--border);
+      opacity: 0;
+      animation: fadeUp 0.7s ease forwards;
+    }
+
+    .section:nth-of-type(1) { animation-delay: 0.4s; }
+    .section:nth-of-type(2) { animation-delay: 0.5s; }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 48px;
+      letter-spacing: 0.02em;
+      line-height: 1;
+    }
+
+    .section-count {
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+    }
+
+    /* APPS */
+    .apps { display: flex; flex-direction: column; }
+
+    .app-row {
+      display: grid;
+      grid-template-columns: 40px 1fr auto;
+      align-items: center;
+      gap: 32px;
+      padding: 28px 0;
+      border-top: 1px solid var(--border);
+      transition: padding-left 0.25s ease;
+    }
+
+    .app-row:last-child { border-bottom: 1px solid var(--border); }
+    .app-row:hover { padding-left: 12px; }
+
+    .app-index {
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+    }
+
+    .app-name {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      color: var(--text);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .app-name-jp {
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--muted);
+    }
+
+    .app-desc {
+      font-size: 13px;
+      color: var(--muted);
+      max-width: 480px;
+      line-height: 1.7;
+    }
+
+    .app-status {
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      padding: 5px 12px;
+      border-radius: 2px;
+    }
+
+    .status-live  { background: var(--text); color: #fff; }
+    .status-soon  { border: 1px solid var(--border); color: var(--muted); }
+
+    /* CONTACT */
+    .contact-grid { display: flex; flex-direction: column; gap: 20px; }
+
+    .contact-item { display: flex; align-items: center; gap: 24px; }
+
+    .contact-label {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      width: 72px;
+      flex-shrink: 0;
+    }
+
+    .contact-value {
+      font-size: 15px;
+      color: var(--text);
+      text-decoration: none;
+      position: relative;
+    }
+
+    .contact-value::after {
+      content: '';
+      position: absolute;
+      bottom: -1px; left: 0;
+      width: 0; height: 1px;
+      background: var(--text);
+      transition: width 0.25s ease;
+    }
+
+    .contact-value:hover::after { width: 100%; }
+
+    /* FOOTER */
+    footer {
+      padding: 24px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-text { font-size: 12px; color: var(--muted); }
+
+    .footer-mark {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 20px;
+      color: #e8e8e8;
+      letter-spacing: 0.05em;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      nav, .hero, .section, footer { padding-left: 24px; padding-right: 24px; }
+      .hero-number { display: none; }
+      .app-row { grid-template-columns: 1fr auto; }
+      .app-index { display: none; }
+      footer { flex-direction: column; gap: 8px; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-name" href="#"></a>
+    <ul class="nav-links">
+      <li><a href="#apps">Apps</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-number" aria-hidden="true">3</div>
+    <p class="hero-tag">Indie iOS Developer</p>
+    <h1>Apps with<br>purpose.</h1>
+    <p class="hero-sub">Building tools for intentional living, focus, and daily momentum — one app at a time.</p>
+  </section>
+
+  <div class="section" id="apps">
+    <div class="section-header">
+      <h2 class="section-title">Apps</h2>
+      <span class="section-count">03 projects</span>
+    </div>
+    <div class="apps">
+
+      <div class="app-row">
+        <span class="app-index">01</span>
+        <div>
+          <p class="app-name">日進月歩 <span class="app-name-jp">Nisshin Geppo</span></p>
+          <p class="app-desc">A life-progress app for intentional living. Track your days, reflect on what matters, and build momentum — one day at a time.</p>
+        </div>
+        <span class="app-status status-soon">Coming Soon</span>
+      </div>
+
+      <div class="app-row">
+        <span class="app-index">02</span>
+        <div>
+          <p class="app-name">オルプレ <span class="app-name-jp">Orpure</span></p>
+          <p class="app-desc">A video player with AB loop and advanced playback features — offered free, supported by ads.</p>
+        </div>
+        <a href="https://apps.apple.com/us/app/オルプレ/id6760822544" target="_blank" style="display:inline-block;flex-shrink:0;">
+          <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store" style="height:36px;width:auto;display:block;">
+        </a>
+      </div>
+
+      <div class="app-row">
+        <span class="app-index">03</span>
+        <div>
+          <p class="app-name">SnoozeOrLose</p>
+          <p class="app-desc">An alarm app for people who struggle to wake up. Silence the alarm, complete a mission, or face the consequences.</p>
+        </div>
+        <span class="app-status status-soon">Coming Soon</span>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="section" id="contact">
+    <div class="section-header">
+      <h2 class="section-title">Contact</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <span class="contact-label">Email</span>
+        <a class="contact-value" href="mailto:42yfftk3vbaq@gmail.com">42yfftk3vbaq@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <span class="contact-label">GitHub</span>
+        <a class="contact-value" href="https://github.com/giorrr" target="_blank">github.com/giorrr</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <span class="footer-text">© 2026 YOUR_NAME. All rights reserved.</span>
+    <span class="footer-mark" aria-hidden="true">iOS</span>
+  </footer>
+
+</body>
+</html>
