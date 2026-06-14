@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="fi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tietosuojakäytäntö - Lock Alarm - Re: U</title>
+    <meta name="robots" content="noindex,nofollow" />
+    <style>
+        :root{--bg:#ffffff;--text:#111827;--muted:#6b7280;--border:#e5e7eb;--link:#2563eb;--max:860px;--radius:14px}
+        *{box-sizing:border-box}
+        body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.7;color:var(--text);background:var(--bg)}
+        a{color:var(--link);text-underline-offset:3px}
+        header{border-bottom:1px solid var(--border);background:#fafafa}
+        .container{max-width:var(--max);margin:0 auto;padding:18px 16px}
+        .brand{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+        .brand h1{font-size:18px;margin:0;font-weight:700}
+        .brand .subtitle{font-size:13px;color:var(--muted)}
+        main{padding:26px 0 40px}
+        .card{border:1px solid var(--border);border-radius:var(--radius);padding:18px 16px;background:#fff}
+        .meta{color:var(--muted);font-size:13px;margin:8px 0 0}
+        nav.toc{margin-top:14px;padding-top:14px;border-top:1px dashed var(--border)}
+        nav.toc a{display:block;padding:4px 0;text-decoration:none}
+        nav.toc a:hover{text-decoration:underline}
+        h2{margin:28px 0 10px;font-size:18px}
+        p,li{margin:0 0 10px}
+        ul{padding-left:18px}
+        footer{border-top:1px solid var(--border);background:#fafafa;color:var(--muted);font-size:13px}
+        .footer-row{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}
+        .badge{display:inline-block;border:1px solid var(--border);border-radius:999px;padding:2px 10px;background:#fff;color:var(--muted);font-size:12px}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="brand">
+                <h1>Tietosuojakäytäntö</h1>
+                <div class="subtitle">(Sovellus: <span class="badge">Lock Alarm - Re: U</span>)</div>
+            </div>
+            <p class="meta">Viimeksi päivitetty: <time datetime="2026-05-31">31. toukokuuta 2026</time></p>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <article class="card">
+                <p>Tämä tietosuojakäytäntö koskee mobiilisovellusta Lock Alarm - Re: U ("Sovellus"), jonka tarjoaa Lock Alarm - Re: U -operaattori ("Palveluntarjoaja"). Sovellus tarjotaan "AS IS" -periaatteella.</p>
+
+                <nav class="toc" aria-label="Sisällysluettelo">
+                    <strong>Sisällysluettelo</strong>
+                    <a href="#s1">1. Tietojen kerääminen ja käyttö</a>
+                    <a href="#s2">2. Screen Time API:n käyttö</a>
+                    <a href="#s3">3. Mainospalvelut (Google AdMob)</a>
+                    <a href="#s4">4. EU:n ja ETA:n käyttäjille (oikeudet GDPR:n mukaan)</a>
+                    <a href="#s5">5. Tietojen tallennus</a>
+                    <a href="#s6">6. Lasten yksityisyys</a>
+                    <a href="#s7">7. Tietoturva</a>
+                    <a href="#s8">8. Muutokset tähän käytäntöön</a>
+                    <a href="#s9">9. Voimaantulopäivä</a>
+                    <a href="#s10">10. Suostumus</a>
+                    <a href="#s11">11. Yhteystiedot</a>
+                </nav>
+
+                <h2 id="s1">1. Tietojen kerääminen ja käyttö</h2>
+                <p>Sovellus ei vaadi käyttäjän rekisteröitymistä eikä kerää suoraan henkilökohtaisesti tunnistettavia tietoja. Käyttöjärjestelmä tai vakiojärjestelmäominaisuudet voivat kuitenkin kerätä automaattisesti seuraavat rajatut tekniset tiedot asianmukaisen toiminnan varmistamiseksi ja laadun parantamiseksi:</p>
+                <ul>
+                    <li>Laitetyyppi</li>
+                    <li>OS-versio</li>
+                    <li>Sovelluksen vakautta koskevat tiedot (kaatumislokit jne.)</li>
+                </ul>
+                <p>Sovellus ei kerää sijaintitietoja (mukaan lukien tarkka sijainti). Sovellus ei käytä kameraa, mikrofonia, yhteystietoja tai kuvakirjastoa. Huomaa, että kolmannen osapuolen mainospalvelut voivat kerätä teknisiä tietoja mainosten näyttämisen yhteydessä.</p>
+
+                <h2 id="s2">2. Screen Time API:n käyttö</h2>
+                <p>Sovellus käyttää iOS:n Screen Time API:a (FamilyControls / ManagedSettings / DeviceActivityMonitor) tarjotakseen sovelluksen käytön rajoitusominaisuuksia.</p>
+                <ul>
+                    <li>Tiedot käyttäjän valitsemista sovelluksista tallennetaan laitteelle ainoastaan läpinäkymättöminä tunnisteina (ApplicationToken). Palveluntarjoaja ei voi nähdä tai saada sovellusten nimiä tai käyttötietoja.</li>
+                    <li>Kaikki Screen Time API:n kautta hankitut ja käsitellyt tiedot pysyvät käyttäjän laitteella, eikä niitä koskaan siirretä ulkoisille palvelimille.</li>
+                    <li>Tämän ominaisuuden käyttö edellyttää, että käyttäjä myöntää Family Controls -käyttöoikeuden.</li>
+                </ul>
+
+                <h2 id="s3">3. Mainospalvelut (Google AdMob)</h2>
+                <p>Sovellus käyttää kolmannen osapuolen mainospalveluja mainosten näyttämiseen. Nämä kolmannet osapuolet voivat kerätä teknisiä tietoja, kuten mainostunnisteita (IDFA), IP-osoitteita, laitetietoja ja sovelluksen käyttötietoja näyttääkseen käyttäjien kiinnostuksen kohteisiin räätälöityjä mainoksia.</p>
+                <p>Sovelluksessa käytettyihin mainospalveluihin kuuluu Google AdMob. Lisätietoja siitä, miten Google käsittelee tietoja, on seuraavissa käytännöissä:</p>
+                <ul>
+                    <li>Googlen tietosuojakäytäntö: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></li>
+                    <li>Miten Google käyttää kumppanisivustojen ja -sovellusten tietoja: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">https://policies.google.com/technologies/partner-sites</a></li>
+                </ul>
+                <p>Palveluntarjoaja ei voi hallita näiden kolmansien osapuolten keräämiä tietoja; kukin palvelu käsittelee kuitenkin tietoja oman tietosuojakäytäntönsä mukaisesti.</p>
+
+                <h2 id="s4">4. EU:n ja ETA:n käyttäjille (oikeudet GDPR:n mukaan)</h2>
+                <p>Tämä osio koskee Euroopan unionissa (EU) ja Euroopan talousalueella (ETA) asuvia käyttäjiä.</p>
+                <p><strong>Käsittelyn oikeusperuste</strong><br>
+                Sovelluksessa mainostarkoituksiin käsiteltävät henkilötiedot perustuvat suostumukseesi (GDPR:n 6 artiklan 1 kohdan a alakohta). Sovellus käyttää Google AdMobin User Messaging Platformia (UMP) suostumuksen hankkimiseen ensimmäisellä käynnistyksellä tai tarvittaessa.</p>
+                <p><strong>Tietojen siirrot EU:n/ETA:n ulkopuolelle</strong><br>
+                Kolmannen osapuolen mainospalvelut (mukaan lukien Google AdMob) voivat siirtää tietoja EU:n/ETA:n ulkopuolisille palvelimille (pääasiassa Yhdysvaltoihin). Tällaiset siirrot tehdään asianmukaisten suojatoimien, mukaan lukien Euroopan komission hyväksymien vakiosopimuslausekkeiden (SCC), mukaisesti.</p>
+                <p><strong>Sinun oikeutesi (GDPR:n 15–22 artikla)</strong><br>
+                Jos asut EU:ssa/ETA:ssa, sinulla on seuraavat oikeudet:</p>
+                <ul>
+                    <li><strong>Oikeus saada pääsy tietoihin:</strong> Pyytää pääsyä Palveluntarjoajan tai kolmansien osapuolten käsittelemiin henkilötietoihisi.</li>
+                    <li><strong>Oikeus oikaisuun:</strong> Pyytää virheellisten tai puutteellisten henkilötietojen korjaamista.</li>
+                    <li><strong>Oikeus tietojen poistamiseen ("oikeus tulla unohdetuksi"):</strong> Pyytää henkilötietojesi poistamista tietyin edellytyksin.</li>
+                    <li><strong>Oikeus käsittelyn rajoittamiseen:</strong> Pyytää tietojesi käsittelyn rajoittamista tietyin edellytyksin.</li>
+                    <li><strong>Oikeus tietojen siirrettävyyteen:</strong> Saada antamasi tiedot jäsennellyssä, koneellisesti luettavassa muodossa.</li>
+                    <li><strong>Oikeus vastustaa käsittelyä:</strong> Vastustaa henkilötietojesi käsittelyä tiettyihin tarkoituksiin.</li>
+                </ul>
+                <p><strong>Personoiduista mainoksista kieltäytyminen</strong><br>
+                Kieltäytyäksesi personoidusta (kohdennetusta) mainonnasta voit rajoittaa mainosseurantaa laitteesi asetuksissa (iOS: Asetukset &gt; Tietosuoja ja turvallisuus &gt; Applen mainonta &gt; Personoidut mainokset).</p>
+                <p><strong>Oikeuksiesi käyttäminen</strong><br>
+                Käyttääksesi yllä mainittuja oikeuksia ota meihin yhteyttä tämän sivun alareunassa olevan lomakkeen kautta. Google AdMobin keräämien ja käsittelemien tietojen osalta käytä Googlen tietojen poistopyyntösivua.</p>
+
+                <h2 id="s5">5. Tietojen tallennus</h2>
+                <p>Sovellus ei tallenna mitään käyttäjätietoja ulkoisille palvelimille. Kaikki hälytysasetuksiin ja sovelluksen käytön rajoituksiin liittyvät tiedot tallennetaan käyttäjän laitteelle ja niitä hallinnoi laitteen käyttöjärjestelmä. Kun Sovellus poistetaan, siihen liittyvät tiedot poistetaan laitteen vakiotoiminnan mukaisesti.</p>
+
+                <h2 id="s6">6. Lasten yksityisyys</h2>
+                <p>Sovellusta ei ole tarkoitettu alle 13-vuotiaille henkilöille. Palveluntarjoaja ei tarkoituksellisesti kerää henkilökohtaisesti tunnistettavia tietoja alle 13-vuotiailta. Jos Palveluntarjoajan tietoon tulee, että henkilötietoja on kerätty alle 13-vuotiaalta lapselta, ryhdytään viipymättä asianmukaisiin toimiin.</p>
+
+                <h2 id="s7">7. Tietoturva</h2>
+                <p>Palveluntarjoaja pyrkii suojaamaan käyttäjätietoja. Sovellus käyttää käyttöjärjestelmän tarjoamia tietoturvamekanismeja varmistaakseen laitteella käsiteltävien tietojen turvallisuuden.</p>
+
+                <h2 id="s8">8. Muutokset tähän käytäntöön</h2>
+                <p>Tätä tietosuojakäytäntöä voidaan päivittää tarpeen mukaan. Muutokset julkaistaan tällä sivulla päivitetyn voimaantulopäivän kanssa. Käyttäjiä kehotetaan tarkistamaan tämä tietosuojakäytäntö säännöllisesti. Sovelluksen jatkuva käyttö merkitsee päivitetyn käytännön hyväksymistä.</p>
+
+                <h2 id="s9">9. Voimaantulopäivä</h2>
+                <p>Tämä tietosuojakäytäntö on voimassa 31. toukokuuta 2026 alkaen.</p>
+
+                <h2 id="s10">10. Suostumus</h2>
+                <p>Käyttämällä Sovellusta hyväksyt tämän tietosuojakäytännön. EU:ssa/ETA:ssa asuvat käyttäjät voivat peruuttaa mainontaan liittyvää tietojen käsittelyä koskevan suostumuksensa milloin tahansa (GDPR:n 7 artiklan 3 kohta). Suostumus voidaan peruuttaa laitteesi mainosasetusten kautta. Suostumuksen peruuttaminen ei vaikuta ennen peruuttamista suoritetun käsittelyn lainmukaisuuteen.</p>
+
+                <h2 id="s11">11. Yhteystiedot</h2>
+                <p>Ota meihin yhteyttä: <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYAUMzvDGLquWyH_iMVtNr0_Jy9wXDXJ-TdsHE6RPWZZb3Eg/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">Yhteydenottolomake</a></p>
+            </article>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-row">
+                <div>&copy; <span id="y"></span> <span class="badge">Lock Alarm - Re: U -operaattori</span></div>
+                <div><a href="./terms_fi.html">Käyttöehdot</a></div>
+            </div>
+        </div>
+    </footer>
+    <script>document.getElementById("y").textContent=new Date().getFullYear();</script>
+</body>
+</html>
