@@ -146,7 +146,7 @@
                 <h1>Integritetspolicy</h1>
                 <div class="subtitle">(App: <span class="badge">CPianoS</span>)</div>
             </div>
-            <p class="meta">Senast uppdaterad: <time datetime="2026-10-18">18 oktober 2026</time></p>
+            <p class="meta">Senast uppdaterad: <time datetime="2026-10-27">27 oktober 2026</time></p>
         </div>
     </header>
 
@@ -167,7 +167,7 @@
                     <a href="#sec5">5. Lagring av data</a>
                     <a href="#sec6">6. Barns integritet</a>
                     <a href="#sec7">7. Säkerhet</a>
-                    <a href="#sec8">8. Tillägg av framtida funktioner</a>
+                    <a href="#sec8">8. Köp inuti appen (Premium-prenumeration)</a>
                     <a href="#sec9">9. Ändringar av denna integritetspolicy</a>
                     <a href="#sec10">10. Ikraftträdandedatum</a>
                     <a href="#sec11">11. Samtycke</a>
@@ -181,20 +181,23 @@
                 </p>
                 <p>Appen använder följande funktioner i enheten på användarens uttryckliga begäran.</p>
                 <ul>
-                    <li>Kamera: används för att fotografera och importera noter på papper.</li>
-                    <li>Bilder: appen använder bildväljaren i iOS för att välja bilder av noter eller omslag. Appen läser endast in de bilder som användaren har valt.</li>
+                    <li>Kamera: används för att fotografera och importera noter på papper samt för att spela in videor av det egna spelandet.</li>
+                    <li>Mikrofon: används endast när en video av spelandet spelas in med ljud. Det inspelade ljudet sparas på enheten som en del av videon och skickas aldrig.</li>
+                    <li>Bilder: appen använder bildväljaren i iOS för att välja bilder av noter eller omslag samt videor av spelande att jämföra med. Appen läser endast in de bilder och videor som användaren har valt.</li>
                     <li>Filer: appen använder filväljaren i iOS för att läsa in noter som pdf eller bild. Appen läser endast in de filer som användaren har valt.</li>
                     <li>Uppläsning: appen använder den talsyntes som är inbyggd i iOS för att läsa upp tonnamn.</li>
                     <li>Live Activities: medan övningstiden mäts visar appen bland annat förfluten tid på låsskärmen och i Dynamic Island.</li>
                 </ul>
                 <p>
-                    Data som importerade notbilder, resultat av notigenkänningen, övningsloggar, inställningar samt noter som låsts upp genom att titta på annonser och deras giltighetstid behandlas och lagras uteslutande på enheten och skickas aldrig till leverantören eller till tredje part.
+                    Data som importerade notbilder, resultat av notigenkänningen, övningsloggar, inspelade videor av spelandet, inställningar och status för Premium-prenumerationen behandlas och lagras uteslutande på enheten och skickas aldrig till leverantören eller till tredje part.
                     Även notigenkänningen sker på enheten.
-                    Appen använder inte platsinformation (exakt plats), kontakter eller mikrofonen.
+                    Appen använder inte platsinformation (exakt plats) eller kontakter.
                 </p>
                 <p>Appen kommunicerar med externa tjänster i följande fall.</p>
                 <ul>
                     <li>När annonser läses in och visas (avsnitt 3)</li>
+                    <li>När Premium-prenumerationen köps eller återställs samt när prenumerationsstatusen kontrolleras (appen kommunicerar med Apples App Store; avsnitt 8)</li>
+                    <li>När pianoljud laddas ned (ljuddata tas emot från Apples servrar)</li>
                     <li>När användarvillkoren, integritetspolicyn eller kontaktsidan öppnas i appen (leverantörens webbsidor eller ett Google-formulär läses in)</li>
                 </ul>
 
@@ -214,6 +217,7 @@
                 <h2 id="sec3">3. Annonstjänst (Google AdMob)</h2>
                 <p>
                     Appen använder annonstjänsten ”Google AdMob” från Google LLC i syfte att visa annonser.
+                    Så länge användaren har en Premium-prenumeration (avsnitt 8) visas inga annonser.
                     Google AdMob kan samla in information som följande för att leverera annonser, mäta annonsers effektivitet, förhindra bedrägerier och visa annonser utifrån användarens intressen.
                 </p>
                 <ul>
@@ -287,6 +291,7 @@
                     Appen lagrar inte användarnas data på leverantörens servrar.
                     All data som appen hanterar finns kvar på användarens enhet, och hanteringen av den överlåts åt enhetens operativsystem.
                     Om säkerhetskopiering av enheten (iCloud-säkerhetskopiering m.m.) är aktiverad ingår appens data i säkerhetskopian enligt operativsystemets standardbeteende.
+                    Inspelade eller valda videor av spelandet ingår dock inte i säkerhetskopian på grund av sin storlek (videorna går förlorade om användaren byter enhet eller raderar appen).
                     Om appen avinstalleras raderas tillhörande data enligt enhetens standardbeteende.
                 </p>
 
@@ -304,10 +309,18 @@
                     Appen använder de säkerhetsmekanismer (dataskydd) som operativsystemet tillhandahåller för att säkerställa säkerheten för den information som behandlas på enheten.
                 </p>
 
-                <h2 id="sec8">8. Tillägg av framtida funktioner</h2>
+                <h2 id="sec8">8. Köp inuti appen (Premium-prenumeration)</h2>
                 <p>
-                    Om leverantören i framtiden lägger till funktioner som innebär insamling av ny information, till exempel betalfunktioner (köp inuti appar, prenumerationer) eller integration med externa tjänster, kommer leverantören att i förväg revidera denna integritetspolicy och tydligt ange vilken information som samlas in och i vilket syfte.
-                    Betalningar för köp inuti appar hanteras av Apple, och leverantören samlar inte in några betalningsuppgifter.
+                    Appen erbjuder en betald Premium-prenumeration (en prenumeration som förnyas automatiskt).
+                    Köp, betalning, förnyelse och uppsägning hanteras av Apples App Store, och leverantören får inte tillgång till betalningsuppgifter (t.ex. kreditkortsnummer), namn, e-postadresser eller Apple-ID.
+                </p>
+                <p>
+                    För att avgöra om Premium-prenumerationen kan användas tar appen via Apples StoreKit emot prenumerationsstatus, till exempel vilken prenumeration som tecknats, utgångsdatum och identifierare för köptransaktioner, och använder den endast på enheten.
+                    Denna information skickas aldrig till leverantören eller till tredje part.
+                    Information om hur Apple hanterar uppgifter finns i Apples integritetspolicy som anges i avsnitt 2.
+                </p>
+                <p>
+                    Om leverantören i framtiden lägger till funktioner som innebär insamling av ny information, till exempel integration med externa tjänster, kommer leverantören att i förväg revidera denna integritetspolicy och tydligt ange vilken information som samlas in och i vilket syfte.
                 </p>
 
                 <h2 id="sec9">9. Ändringar av denna integritetspolicy</h2>
@@ -319,7 +332,7 @@
                 </p>
 
                 <h2 id="sec10">10. Ikraftträdandedatum</h2>
-                <p>Denna integritetspolicy gäller från och med den 18 oktober 2026.</p>
+                <p>Denna integritetspolicy gäller från och med den 27 oktober 2026.</p>
 
                 <h2 id="sec11">11. Samtycke</h2>
                 <p>
