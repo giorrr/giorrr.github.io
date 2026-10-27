@@ -146,7 +146,7 @@
                 <h1>Privacy Policy</h1>
                 <div class="subtitle">(App: <span class="badge">CPianoS</span>)</div>
             </div>
-            <p class="meta">Last updated: <time datetime="2026-10-18">October 18, 2026</time></p>
+            <p class="meta">Last updated: <time datetime="2026-10-27">October 27, 2026</time></p>
         </div>
     </header>
 
@@ -167,7 +167,7 @@
                     <a href="#sec5">5. Data Storage</a>
                     <a href="#sec6">6. Children's Privacy</a>
                     <a href="#sec7">7. Security</a>
-                    <a href="#sec8">8. Future Features</a>
+                    <a href="#sec8">8. In-App Purchases (Premium Plan)</a>
                     <a href="#sec9">9. Changes to This Privacy Policy</a>
                     <a href="#sec10">10. Effective Date</a>
                     <a href="#sec11">11. Consent</a>
@@ -181,20 +181,23 @@
                 </p>
                 <p>Based on the user's explicit actions, the App uses the following device features:</p>
                 <ul>
-                    <li>Camera: Used to capture and import paper sheet music.</li>
-                    <li>Photos: The iOS photo picker is used to select images of sheet music or covers. The App only reads the images the user selects.</li>
+                    <li>Camera: Used to capture and import paper sheet music, and to record videos of the user's own performances.</li>
+                    <li>Microphone: Used only when recording performance videos with sound. The recorded audio is saved on the device as part of the video and is never transmitted.</li>
+                    <li>Photos: The iOS photo picker is used to select images of sheet music or covers, and performance videos to compare. The App only reads the images and videos the user selects.</li>
                     <li>Files: The iOS file picker is used to import sheet music PDFs and images. The App only reads the files the user selects.</li>
                     <li>Speech: The speech synthesis feature built into iOS is used to read note names aloud.</li>
                     <li>Live Activities: While practice time is being tracked, elapsed time and related information are shown on the Lock Screen and in the Dynamic Island.</li>
                 </ul>
                 <p>
-                    All data, including imported sheet music images, sheet music recognition results, practice records, settings, and sheet music unlocked by watching ads along with their expiration times, is processed and stored only on the device and is never sent to the Provider or any third party.
+                    All data, including imported sheet music images, sheet music recognition results, practice records, recorded performance videos, settings, and Premium Plan subscription status, is processed and stored only on the device and is never sent to the Provider or any third party.
                     Sheet music recognition is also performed on the device.
-                    The App does not use location information (precise location), contacts, or the microphone.
+                    The App does not use location information (precise location) or contacts.
                 </p>
                 <p>The App communicates externally in the following cases:</p>
                 <ul>
                     <li>When loading and displaying advertisements (see Section 3)</li>
+                    <li>When purchasing or restoring the Premium Plan, and when checking subscription status (the App communicates with Apple's App Store; see Section 8)</li>
+                    <li>When downloading piano sounds (sound data is received from Apple's servers)</li>
                     <li>When opening the Terms of Service, Privacy Policy, or contact page within the App (the Provider's web pages or a Google Form are loaded)</li>
                 </ul>
 
@@ -214,6 +217,7 @@
                 <h2 id="sec3">3. Advertising Service (Google AdMob)</h2>
                 <p>
                     The App uses Google AdMob, an advertising service provided by Google LLC, for the purpose of displaying advertisements.
+                    While the user is subscribed to the Premium Plan (see Section 8), no ads are displayed.
                     Google AdMob may collect information such as the following in order to deliver ads, measure ad performance, prevent fraud, and display ads based on users' interests:
                 </p>
                 <ul>
@@ -287,6 +291,7 @@
                     The App does not store user data on the Provider's servers.
                     All data handled by the App is kept on the user's device, and its management is entrusted to the device's operating system.
                     If device backups (such as iCloud Backup) are enabled, App data is included in backups according to the standard behavior of the operating system.
+                    However, recorded or selected performance videos are not included in backups because of their large size (the videos will be lost if the user moves to a new device or deletes the App).
                     If the App is uninstalled, related data will be deleted according to the standard behavior of the device.
                 </p>
 
@@ -304,10 +309,18 @@
                     The App uses the security mechanisms provided by the operating system (Data Protection) to ensure the safety of information processed on the device.
                 </p>
 
-                <h2 id="sec8">8. Future Features</h2>
+                <h2 id="sec8">8. In-App Purchases (Premium Plan)</h2>
                 <p>
-                    If the Provider adds features in the future that involve the collection of new information, such as paid features (in-app purchases or subscriptions) or integration with external services, the Provider will revise this Privacy Policy in advance and clearly state what information is collected and for what purpose.
-                    Payments for in-app purchases are processed by Apple, and the Provider does not obtain payment information.
+                    The App offers a paid Premium Plan (auto-renewable subscription).
+                    Purchases, payments, renewals, and cancellations are processed by Apple's App Store, and the Provider does not obtain payment information (such as credit card numbers), names, email addresses, or Apple IDs.
+                </p>
+                <p>
+                    To determine whether the Premium Plan is available, the App receives subscription status information from Apple through StoreKit, such as the subscribed plan, the expiration date, and purchase transaction identifiers, and uses it only on the device.
+                    This information is never sent to the Provider or any third party.
+                    For details on how Apple handles information, please refer to Apple's Privacy Policy referenced in Section 2.
+                </p>
+                <p>
+                    If the Provider adds features in the future that involve the collection of new information, such as integration with external services, the Provider will revise this Privacy Policy in advance and clearly state what information is collected and for what purpose.
                 </p>
 
                 <h2 id="sec9">9. Changes to This Privacy Policy</h2>
@@ -319,7 +332,7 @@
                 </p>
 
                 <h2 id="sec10">10. Effective Date</h2>
-                <p>This Privacy Policy is effective as of October 18, 2026.</p>
+                <p>This Privacy Policy is effective as of October 27, 2026.</p>
 
                 <h2 id="sec11">11. Consent</h2>
                 <p>
